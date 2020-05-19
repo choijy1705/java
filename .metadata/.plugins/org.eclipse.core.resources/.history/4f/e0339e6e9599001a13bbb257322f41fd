@@ -1,0 +1,41 @@
+package SWexpert;
+
+import java.util.*;
+
+public class Harvest {
+
+	public static void main(String[] args)  {
+		Scanner sc = new Scanner(System.in);
+		
+		int C = sc.nextInt();
+		
+		for(int i=0;i<C;i++) {
+			int n = sc.nextInt();
+			
+			int[][] arr= new int[n][n];
+			int k = n/2;
+			int z = 0;
+			int sum=0;
+			
+			
+			for(int x=0;x<n;x++) {
+				for(int y=0;y<n;y++) {
+					arr[x][y] = sc.nextInt();
+					if(x < k && y >= k-z && y <= k+z) {
+						sum += arr[x][y];
+						z++;
+					}else if(x >=k && y >= k-z && y <= k+z) {
+						sum += arr[x][y];
+						z--;
+					}
+				}
+			}
+			
+			
+			System.out.println("#" + (i+1) + " " + sum);
+		}
+		
+		
+	}
+
+}
