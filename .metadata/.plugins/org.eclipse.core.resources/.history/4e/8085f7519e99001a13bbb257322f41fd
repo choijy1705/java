@@ -33,7 +33,7 @@ public class Boardcover {
 			String input = br.readLine();
 			int j=1;
 			for(char c : input.toCharArray()) {
-				board[i+1][j] = String.valueOf(c);
+				board[i+1][j] = String.valueOf(C);
 				j++;
 			}
 		}

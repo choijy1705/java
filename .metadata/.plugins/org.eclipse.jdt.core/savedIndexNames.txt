@@ -15,6 +15,5 @@ INDEX VERSION 1.131+C:\Users\cjy17\Desktop\Solution\.metadata\.plugins\org.eclip
 3934384119.index
 4193803526.index
 593251401.index
-1755401707.index
 653055787.index
 334484962.index

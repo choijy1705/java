@@ -5,6 +5,11 @@ public class Permutation {
 
 	public static void main(String[] args) {
 		
+		List<String> list = new ArrayList<>();
+		
+		String st = "abcdefg";
+		String result = st.substring(0,3);
+		System.out.println(result);
 		
 		Scanner sc = new Scanner(System.in);
 		

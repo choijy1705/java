@@ -60,7 +60,7 @@ public class Clocksync {
 		
 		//테스트 케이스 입력
 		C = Integer.parseInt(br.readLine().trim());
-
+		assert C <= 30 : "Error :: testCase must be no more than 30";
 		
 		while(C-->0) {
 			clocksNow = new int[CLOCKS];
@@ -68,7 +68,7 @@ public class Clocksync {
 			StringTokenizer st = new StringTokenizer(br.readLine().trim());
 			for(int i = 0;i<CLOCKS;i++) {
 				int tmpClock = Integer.parseInt(st.nextToken());
-				
+				assert tmpClock==12 || tmpClock == 3 || tmpClock == 6 || tmpClock == 9: "Time can be inputed 3,6,9,12";
 				clocksNow[i] = tmpClock;
 			}
 			
