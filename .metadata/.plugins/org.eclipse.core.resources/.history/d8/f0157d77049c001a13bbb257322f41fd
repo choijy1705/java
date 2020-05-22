@@ -95,7 +95,7 @@ class game_Frame extends JFrame implements KeyListener, Runnable{
 	public void init() {
 		x = 100;
 		y = 100;
-		f_width = 1200;
+		f_width = 800;
 		f_height = 600;
 		
 		
