@@ -210,39 +210,71 @@ class game_Frame extends JFrame implements KeyListener, Runnable{
 				Missile_List.add(ms);
 			}
 			if (Crash(x, y, en.x, en.y, Player_img[0], Enemy_img)) {
-				// 플레이어와적의충돌을판정하여
-				// boolean값을 리턴받아true면 아래를실행합니다.
-				player_Hitpoint--; // 플레이어체력을1깍습니다.
-				Enemy_List.remove(i); // 적을제거합니다.
-				game_Score += 10;
-				// 제거된적으로게임스코어를10 증가시킵니다.
-				ex = new Explosion(en.x + Enemy_img.getWidth(null) / 2, en.y+ Enemy_img.getHeight(null) / 2, 0);
-				// 적이위치해있는곳의중심좌표x,y 값과
-				// 폭발설정을받은값( 0 또는1 )을받습니다.
-				// 폭발설정값- 0 : 폭발, 1 : 단순피격
-				Explosion_List.add(ex);
-				// 제거된적위치에폭발이펙트를추가합니다.
-				ex = new Explosion(x, y, 1);
-				// 적이위치해있는곳의중심좌표x,y 값과
-				// 폭발설정을받은값( 0 또는1 )을받습니다.
-				// 폭발설정값- 0 : 폭발, 1 : 단순피격
-				Explosion_List.add(ex);
-				// 충돌시플레이어의위치에충돌용이펙트를추가.
-			}
 
-		}
+				// 플레이어와적의충돌을판정하여
+
+				// boolean값을 리턴받아true면 아래를실행합니다.
+
+				player_Hitpoint--; // 플레이어체력을1깍습니다.
+
+				Enemy_List.remove(i); // 적을제거합니다.
+
+				game_Score += 10;
+
+				// 제거된적으로게임스코어를10 증가시킵니다.
+
+				ex = new Explosion(en.x + Enemy_img.getWidth(null) / 2, en.y
+
+				+ Enemy_img.getHeight(null) / 2, 0);
+
+				// 적이위치해있는곳의중심좌표x,y 값과
+
+				// 폭발설정을받은값( 0 또는1 )을받습니다.
+
+				// 폭발설정값- 0 : 폭발, 1 : 단순피격
+
+				Explosion_List.add(ex);
+
+				// 제거된적위치에폭발이펙트를추가합니다.
+
+				ex = new Explosion(x, y, 1);
+
+				// 적이위치해있는곳의중심좌표x,y 값과
+
+				// 폭발설정을받은값( 0 또는1 )을받습니다.
+
+				// 폭발설정값- 0 : 폭발, 1 : 단순피격
+
+				Explosion_List.add(ex);
+
+				// 충돌시플레이어의위치에충돌용이펙트를추가.
+
+				}
+
+				}
 
 				if (cnt % 200 == 0) {
+
 				//루프카운트를이용한적등장타이밍조절
+
 				en = new Enemy(f_width + 100, 100, enemy_Speed);
+
 				Enemy_List.add(en);
+
 				en = new Enemy(f_width + 100, 200, enemy_Speed);
+
 				Enemy_List.add(en);
+
 				en = new Enemy(f_width + 100, 300, enemy_Speed);
+
 				Enemy_List.add(en);
+
 				en = new Enemy(f_width + 100, 400, enemy_Speed);
+
 				Enemy_List.add(en);
+
 				en = new Enemy(f_width + 100, 500, enemy_Speed);
+
 				Enemy_List.add(en);
 
 				// 적움직임속도를추가로받아적을생성한다.
@@ -250,6 +282,10 @@ class game_Frame extends JFrame implements KeyListener, Runnable{
 				}
 		}
 		
+		
+		
+	}
+
 
 
 	private void MissileProcess() {
