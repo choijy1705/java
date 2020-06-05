@@ -1,0 +1,25 @@
+package referencecode;
+import java.util.*;
+public class Tree {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+	static int N;
+	static int E;
+	public static void main(String[] args) {
+		C = sc.nextInt();
+		
+		for(int tc=1;tc<=C;tc++) {
+			N = sc.nextInt();
+			E = sc.nextInt();
+			
+			
+		}
+
+	}
+
+}
+
+class TreeNode{
+	
+	Tree
+}
