@@ -1,0 +1,32 @@
+package SWexpert;
+import java.util.*;
+public class Swea7985 {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+	static int K;
+	public static void main(String[] args) {
+		C = sc.nextInt();
+		
+		for(int tc=1;tc<=C;tc++) {
+			K = sc.nextInt();
+			
+			int n = (int)Math.pow(2, K) - 1;
+			
+			for(int i=0;i<n;i++) {
+				
+			}
+		}
+
+	}
+
+}
+
+class TreeNode{
+	
+	class Tree{
+		
+		
+		
+		
+	}
+}
