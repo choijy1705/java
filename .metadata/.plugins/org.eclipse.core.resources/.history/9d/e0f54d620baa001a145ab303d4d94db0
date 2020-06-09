@@ -1,0 +1,43 @@
+package SWexpert;
+import java.util.*;
+public class Swea5356 {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+
+	public static void main(String[] args) {
+		C = sc.nextInt();
+		
+		for(int tc=1;tc<=C;tc++) {
+			String[] st = new String[5];
+			int max = 0;
+			for(int i=0;i<5;i++) {
+				st[i] = sc.next();
+				System.out.println(st[i]);
+				max = st[i].length() > max ? st[i].length():max;
+				
+			}
+			System.out.println(max);
+			System.out.println("hi");
+			
+			String[][] map = new String[5][max];
+			for(int i=0;i<5;i++) {
+				Arrays.fill(map[i], "");
+				map[i] = st[i].split("");
+			}
+			String result = "";
+			for(int i=0;i<max;i++) {
+				for(int j=0;j<5;j++) {
+					
+					result += map[j][i];
+					
+				}
+			}
+			
+			System.out.println("#" + tc+ " " + result);
+			
+			
+		}
+
+	}
+
+}
