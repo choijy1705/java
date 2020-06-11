@@ -64,7 +64,6 @@ public class Swea1493 {
 		
 		x +=i;
 		y +=j;
-		System.out.println(x + " : " + y);
 	}
 
 }

@@ -1,0 +1,19 @@
+package SWexpert;
+import java.util.*;
+public class Swea3260 {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+	public static void main(String[] args) {
+		C = sc.nextInt();
+		
+		for(int tc=1;tc<=C;tc++) {
+			
+			String a = sc.next();
+			String b = sc.next();
+			
+			System.out.println(Double.valueOf(a));
+		}
+
+	}
+
+}

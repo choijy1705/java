@@ -1,0 +1,31 @@
+package SWexpert;
+
+public class Swea3131 {
+
+	public static void main(String[] args) {
+		String result = "";
+		int i=2;
+		while(i <= 1000000) {
+	
+			if(i%2 == 0) {
+				i++;
+				continue;
+			}
+			
+			int cnt = 0;
+			for(int k=1;k<=i/2;k++) {
+				if(i%k == 0) {
+					cnt++;
+				}
+			}
+			if(cnt == 1) {
+				result += i+" ";
+			}
+			i++;
+		}
+		
+		System.out.println(result);
+
+	}
+
+}
