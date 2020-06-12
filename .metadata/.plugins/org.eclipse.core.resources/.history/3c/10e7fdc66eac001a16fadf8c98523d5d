@@ -10,28 +10,30 @@ public class Swea7087 {
 		for(int tc=1;tc<=C;tc++) {
 			int N = sc.nextInt();
 			
-			char[] arr = new char[N];			
+			String[] arr = new String[N];			
 			for(int i=0;i<N;i++) {
-				arr[i] = sc.next().charAt(0);
+				arr[i] = sc.next();
 			}
 			
-			
-			
 			String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			char[] abc = alpha.toCharArray();
-						
+			char[] ch = alpha.toCharArray();
+			
 			Arrays.sort(arr);
 			
 			
 			int k=0;
 			int cnt = 0;
 			for(int i=0;i<N;i++) {
-				if(arr[i] == abc[k]) {
+				System.out.print(arr[i] + " : " + ch[k]);
+				if(arr[i].charAt(0) == ch[k]) {
 					cnt++;
 					k++;
-				}else if(k>0 && arr[i] == abc[k-1]) {
 					
+					System.out.println("1번째");
+				}else if(k>0 && arr[i].charAt(0) == ch[k-1]) {
+					System.out.println("2번째");
 				}else {
+					System.out.println("3번째");
 					break;
 				}
 				
