@@ -1,0 +1,12 @@
+package SWexpert;
+
+public class solution {
+
+	public static void main(String[] args) {
+		String s = "!";
+		
+		System.out.println(s.equals("!"));
+
+	}
+
+}
