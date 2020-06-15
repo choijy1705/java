@@ -1,0 +1,69 @@
+package SWexpert;
+import java.util.*;
+public class Swea9280 {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+	static int N;
+	static int M;
+	public static void main(String[] args) {
+		C = sc.nextInt();
+		
+		for(int tc=1;tc<=C;tc++) {
+			N = sc.nextInt();
+			M = sc.nextInt();
+			
+			int[] price = new int[N];
+			int[] carnum = new int[N];
+			boolean[] park = new boolean[N];
+			Queue<Integer> wait = new LinkedList<>();
+			
+			for(int i=0;i<N;i++) {
+				price[i] = sc.nextInt();
+			}
+			int sum = 0;
+			for(int i=0;i<M*2;i++) {
+				
+				int car = sc.nextInt();
+				
+				if(car >0) {
+					boolean chk = true;
+					for(int j=0;j<N;j++) {
+						if(!park[j]) {
+							carnum[j] = car;
+							sum+= car*price[j];
+							chk = false;
+							break;
+						}
+					}
+					if(chk) {
+						wait.add(car);
+					}
+					
+					
+				}else {
+					for(int j=0;j<N;j++) {
+						if(carnum[j] == car) {
+							carnum[j] = 0;
+							park[j] = false;
+						}
+					}
+					
+					if(!wait.isEmpty()) {
+						for(int j=0;j<N;j++) {
+							if(!park[j]) {
+								int a = wait.poll();
+								carnum[j] = a;
+								sum += a*price[j];
+								break;
+							}
+						}
+					}
+				}
+			}
+			
+			//System.out.println("#" + tc + " " + sum);
+		}
+
+	}
+
+}
