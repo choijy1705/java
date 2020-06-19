@@ -19,7 +19,6 @@ public class Swea9280 {
 			Queue<Integer> wait = new LinkedList<>();
 			
 			Arrays.fill(park, false);
-			Arrays.fill(carnum, 0);
 			
 			for(int i=0;i<N;i++) {
 				price[i] = sc.nextInt();
@@ -27,16 +26,19 @@ public class Swea9280 {
 			
 			for(int i=0;i<M;i++) {
 				carweight[i] = sc.nextInt();
-			}// 2,1,3,8
-			int sum = 0; //주차비 합계
+			}
+			int sum = 0;
 			for(int i=0;i<M*2;i++) {
+				
 				int car = sc.nextInt();
+				
+				
 				if(car >0) {
 					boolean chk = true;
 					for(int j=0;j<N;j++) {
 						if(!park[j]) {
 							carnum[j] = carweight[car-1];
-							sum+= carnum[j]*price[j];
+							sum+= carweight[car-1]*price[j];
 							park[j] = true;
 							chk = false;
 							break;
@@ -50,12 +52,12 @@ public class Swea9280 {
 				}else {
 					for(int j=0;j<N;j++) {
 						if(carnum[j] == carweight[-car-1]) {
+							carnum[j] = 0;
 							park[j] = false;
 							
 							if(!wait.isEmpty()) {
 								carnum[j] = wait.poll();
 								sum+= carnum[j] * price[j];
-								park[j] = true;
 							}
 							break;
 						}
