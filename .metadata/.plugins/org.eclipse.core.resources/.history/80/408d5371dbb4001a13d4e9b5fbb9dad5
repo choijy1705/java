@@ -24,9 +24,7 @@ public class Swea6019 {
 
 			double flydistance = crushtime * fly;
 			
-			flydistance = Math.round(flydistance*1000000)/1000000;
-			
-			System.out.printf("#%d %.6f",tc,flydistance);
+			System.out.println("#" + tc + " " + flydistance);
 		}
 
 	}

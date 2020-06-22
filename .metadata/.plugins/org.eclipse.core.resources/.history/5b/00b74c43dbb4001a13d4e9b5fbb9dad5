@@ -20,13 +20,27 @@ public class Swea6019 {
 			int dir = 0;
 			double realtime = 0;
 			double crushtime = distance/(A+B);
+			double time = 1;
+			while(time >0) {
+				
+				if(dir ==0) {
+					time = distance/(fly + B);
+				}else {
+					time = distance/(fly+A);
+				}
+				realtime += time;
+				distance -= (A+B)*time;
+				if(dir == 0) {
+					dir = 1;
+				}else {
+					dir = 0;
+				}
+				
+			}
 			
-
-			double flydistance = crushtime * fly;
+			double flydistance = realtime * fly;
 			
-			flydistance = Math.round(flydistance*1000000)/1000000;
-			
-			System.out.printf("#%d %.6f",tc,flydistance);
+			System.out.println("#" + tc + " " + flydistance);
 		}
 
 	}
