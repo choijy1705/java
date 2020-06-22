@@ -22,6 +22,7 @@ public class Swea8104 {
 				for(int i=0;i<N;i++) {
 					
 					sum += num;
+					System.out.println(sum);
 					if(i%2 == 0) {
 						num += (2*K -(2*n -1));
 					}else {
