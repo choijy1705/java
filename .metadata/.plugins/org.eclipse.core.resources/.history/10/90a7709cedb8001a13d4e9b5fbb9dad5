@@ -1,0 +1,44 @@
+package SWexpert;
+import java.util.*;
+
+public class Swea1860 {
+	static Scanner sc = new Scanner(System.in);
+	static int C;
+	static int N; // N명 자격
+	static int M; // M초
+	static int K; // K개
+	public static void main(String[] args) {
+		C =sc.nextInt();
+		for(int tc=1;tc<=C;tc++) {
+			N = sc.nextInt();
+			M = sc.nextInt();
+			K = sc.nextInt();
+			
+			int[] arrive = new int[N];
+			for(int i=0;i<N;i++) {
+				arrive[i] = sc.nextInt();
+			}
+			Arrays.sort(arrive);
+			String result = "Possible";
+			int fish = 0;
+			
+			for(int i=0;i<arrive.length;i++) {
+				
+				if(i>0 && (arrive[i-1]/M) != arrive[i]/M) {
+					fish += (arrive[i]/M)*K;
+				}else if(i==0) {
+					fish += (arrive[i]/M)*K;
+				}
+				fish--;
+				if(fish <0) {
+					result = "Impossible";
+				}
+			}
+			
+			
+			
+			System.out.println("#" + tc + " " + result);
+		}
+	}
+
+}

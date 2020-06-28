@@ -1,5 +1,4 @@
 package SWexpert;
-// 알 덴테 스파게티
 import java.util.*;
 public class Swea8457 {
 	static Scanner sc = new Scanner(System.in);
@@ -17,14 +16,11 @@ public class Swea8457 {
 			int cnt = 0;
 			for(int i=0;i<N;i++) {
 				int time = sc.nextInt();
-				
-				for(int j=B-E;j<=B+E;j++) {
-					if(j%time == 0) {
-						cnt++;
-						break;
-					}
+				int possible = (B-E)/time * time+time;
+				System.out.println(possible);
+				if(possible>=B-E && possible<=B+E) {
+					cnt++;
 				}
-				
 			
 			}
 			
